@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         YtUpNext
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  Add up next button to Youtube videos
 // @author       protoCJ
-// @match        https://www.youtube.com/watch*
+// @match        https://www.youtube.com/*
 // @grant        none
 // @downloadURL  https://github.com/protoCJ/youtube-up-next/raw/master/YtUpNext.user.js
 // ==/UserScript==
