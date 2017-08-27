@@ -6,6 +6,7 @@
 // @author       protoCJ
 // @match        https://www.youtube.com/watch*
 // @grant        none
+// @downloadURL  https://github.com/protoCJ/youtube-up-next/raw/master/YtUpNext.user.js
 // ==/UserScript==
 
 
