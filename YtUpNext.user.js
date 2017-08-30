@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YtUpNext
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Add up next button to Youtube videos
 // @author       protoCJ
 // @match        https://www.youtube.com/*
@@ -36,10 +36,10 @@
     function setupVideos() {
         if (!isSetUp) {
             upNextVideos.forEach(function(video) {
-                document.querySelector('.video-list').append(htmlToElement(video));
+                document.querySelector('ytd-compact-autoplay-renderer').append(htmlToElement(video));
             });
 
-            var videos = document.querySelectorAll('.video-list-item');
+            var videos = document.querySelectorAll('ytd-compact-video-renderer');
             videos.forEach(addUpNextButton);
             isSetUp = true;
         }
@@ -65,7 +65,7 @@
             upNextButton.addEventListener('click',function() {
                 upNextVideoList.push(upNextLink);
                 upNextVideos.push(video.cloneNode(true).outerHTML);
-                document.querySelector('.video-list').append(video);
+                document.querySelector('ytd-compact-autoplay-renderer').append(video);
                 upNextButton.innerHTML = 'Added! ' + upNextVideoList.length + ' in queue.';
             });
         }
